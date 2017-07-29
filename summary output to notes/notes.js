@@ -12,8 +12,10 @@ for var j = 0; j < summary.length; i++{
 }
 }
 */
+var id = 'demo';
 
-for (var i = ; i < notes.length; i++) {
+for (var i = 0; i < notes.length; i++) {
+	document.getElementById("demo").innerHTML = notes;
 	var summary = notes[i].summary.split("[BREAK"])
 	for (var j = 0; j < summary.length; j++) {summary[j[]]}
 }

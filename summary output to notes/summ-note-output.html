@@ -16,7 +16,21 @@ var employees = [
 First Name: <span id="fname"></span><br /> 
 Last Name: <span id="lname"></span><br /> 
 </p> 
-<script type="text/javascript">
+<script >
+
+
+var id = 'demo';
+
+for (var i = 0; i < notes.length; i++) {
+  document.getElementById("demo").innerHTML = notes;
+  var summary = notes[i].summary.split("[BREAK"])
+  for (var j = 0; j < summary.length; j++) {summary[j[]]}
+}
+
+
+
+<!-- 
+type="text/javascript">
 var txt = '{"employees":[' +
 '{"firstName":"John","lastName":"Doe" },' +
 '{"firstName":"Anna","lastName":"Smith" },' +
@@ -28,6 +42,7 @@ for (i=0; i<txt.length; i++){
     document.getElementById("fname").innerHTML=obj.employees[i].firstName 
     document.getElementById("lname").innerHTML=obj.employees[i].lastName 
 }
+-->
 </script>
 </body>
 </html>
