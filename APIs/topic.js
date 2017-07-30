@@ -5,7 +5,7 @@ module.exports = {
     key: "0ZMCFUgJcZmsheN5g0vybr743wQ3p16mXWzjsnkZtcNv6rfY3O",
     topic: function(text, key) {
         unirest.post("https://proxem-thematization.p.mashape.com/api/wikiAnnotator/GetCategories?nbtopcat=20")
-        .header("X-Mashape-Key", key)
+        .header("X-Mashape-Key", "0ZMCFUgJcZmsheN5g0vybr743wQ3p16mXWzjsnkZtcNv6rfY3O")
         .header("Accept", "application/json")
         .header("Content-Type", "text/plain")
         .send(text)
