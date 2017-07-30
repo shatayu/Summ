@@ -25,13 +25,13 @@ router.use(function(req, res, next) {
 router.route('/summary/:url')
 	.get(function(req, res) {     
         // first GET request summarizes URL
-        unirest.get("https://community-smmry.p.mashape.com/?SM_API_KEY=B24997C354&SM_URL=" + req.params.url + "&SM_WITH_BREAK=true")
+        unirest.get("https://community-smmry.p.mashape.com/?SM_API_KEY=7359615902&SM_URL=" + req.params.url + "&SM_WITH_BREAK=true")
             .header("X-Mashape-Key", "0ZMCFUgJcZmsheN5g0vybr743wQ3p16mXWzjsnkZtcNv6rfY3O")
             .header("Accept", "text/plain")
             .end(function (summary) {
                 // second GET request gets topics of summarized article
                 unirest.post("https://proxem-thematization.p.mashape.com/api/wikiAnnotator/GetCategories?nbtopcat=20")
-                    .header("X-Mashape-Key", "0ZMCFUgJcZmsheN5g0vybr743wQ3p16mXWzjsnkZtcNv6rfY3O")
+                    .header("X-Mashape-Key", "RAvJDfEXyemshsoBGgeR2hy3aNqhp1yKCg6jsn2wYQ1f6cpZQj")
                     .header("Accept", "application/json")
                     .header("Content-Type", "text/plain")
                     .send(summary.body.sm_api_content)
@@ -39,8 +39,8 @@ router.route('/summary/:url')
                         console.log(topics);
                         // third GET request gets links
                         console.log(topics);
-                        var queries = "memes";
-                        //var queries = topics.body.categories[0].name + " " + topics.body.categories[1].name + " " + topics.body.categories[2].name;
+                        //var queries = "memes";
+                        var queries = topics.body.categories[0].name + " " + topics.body.categories[1].name + " " + topics.body.categories[2].name;
                         //console.log(queries);
                         unirest.get("https://api.cognitive.microsoft.com/bing/v5.0/search?q=" + queries)
                             .header("Ocp-Apim-Subscription-Key", "8f4b856c2c89483a920618c3cd92ee0d")
