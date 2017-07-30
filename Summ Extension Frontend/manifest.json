@@ -15,5 +15,9 @@
             "css": ["styles.css"],
             "js": ["content.js", "./js/jquery/jquery.min.js"]
         }
+    ],
+
+    "web_accessible_resources": [
+        "overlay.html"
     ]
 }
