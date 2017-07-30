@@ -1,12 +1,20 @@
+var overlay = document.createElement('div');
+overlay.style.width = '500px';
+overlay.style.height = '200px';
+overlay.style.position = 'fixed';
+overlay.style.backgroundColor = "darkblue";
+overlay.style.right = '0';
+overlay.style.bottom = '0';
+overlay.style.opacity = '.9';
+document.body.appendChild(overlay);
 
-alert("hey");
-console.log("test");
-var div = document.createElement('div');
-div.style.width = '300px';
-div.style.height = '300px';
-div.style.position = 'fixed';
-div.style.zIndex = '100000';
-div.backgroundColor = 'red';
+var table = document.createElement('table');
+overlay.style.width = '500px';
+overlay.style.height = '200px';
+overlay.style.position = 'fixed';
+overlay.style.right = '0';
+overlay.style.bottom = '0';
+document.body.appendChild(table);
 
-document.body.appendChild(div);
-
+ var html = "<table><tr><td>123</td><td>456</td></tr></table>";
+    document.getElementById("table").innerHTML = html;
