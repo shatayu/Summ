@@ -1,6 +1,6 @@
 var unirest = require("unirest");
 
-function search (keywords) {
+function search (keywords, key) {
     var queries = "";
     for (var i = 0; i < keywords.length; i++) queries += (keywords[i] + " ");
     unirest.get("https://api.cognitive.microsoft.com/bing/v5.0/search?q=" + queries)
