@@ -1,0 +1,68 @@
+<!--
+var employees = [
+{ "firstName":"John" , "lastName":"Doe" }, 
+{ "firstName":"Anna" , "lastName":"Smith" }, 
+{ "firstName":"Peter" , "lastName": "Jones" }
+];
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2 id="demo"></h2>
+
+<p> id="demo"</p>
+
+<script >
+
+
+  var notes = [
+    {
+      url: "www.google.com",
+      summary: "I like memes.[BREAK] Especially when they are spicy.",
+      title: "Rare pepes",
+    },
+    {
+      url: "www.memes.com",
+      summary: "I like pepes.[BREAK] Especially when they are high energy.",
+      title: "Rare memes",
+    }
+  ]
+
+  var id = 'demo';
+  for (var i = 0; i < notes.length; i++) {
+    // create a new div with a unique ID
+    // append that div to the body
+    // insert the text in that div
+    document.getElementById("demo").innerHTML = notes[i];
+    var summary = notes[i].summary.split("[BREAK]")
+    
+    for (var j = 0; j < summary.length; j++) {
+        document.getElementById("demo").innerHTML = summary[j];
+
+  }
+}
+
+</script>
+
+
+</body>
+</html>
+
+
+<!-- 
+type="text/javascript">
+var txt = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+var obj = eval ("(" + txt + ")");
+
+for (i=0; i<txt.length; i++){
+    document.getElementById("fname").innerHTML=obj.employees[i].firstName 
+    document.getElementById("lname").innerHTML=obj.employees[i].lastName 
+}
+-->
