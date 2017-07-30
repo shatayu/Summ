@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-blue.min.css">
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
+        <script src="popup.js"></script>
+
         <style type="text/css">
             .mainPopup {
                 padding: 10px;
@@ -22,8 +24,8 @@
 
         <div class="mainPopup">
             <h1>Summ - Research Assistant</h1>
-            <button id = "record" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                Start Recording
+            <button id = "record" onclick="alert()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                Start Recordings
             </button>
             <button id = "stop" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                 Stop Recording
@@ -32,8 +34,10 @@
 
         </div>
 
-        <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="jquery.observehashchange.js"></script>
-        <script type="text/javascript" src="praiseallah.js"></script>
+        <script>
+            function alert() {
+                alert("I am an alert box!");
+            }
+        </script>
     </body>
 </html>
