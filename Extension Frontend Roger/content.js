@@ -1,4 +1,3 @@
-
 window.onload = function() {
 
     $.get(chrome.extension.getURL('./overlay.html'), function(data) {
@@ -8,4 +7,3 @@ window.onload = function() {
 
 
 }
- 

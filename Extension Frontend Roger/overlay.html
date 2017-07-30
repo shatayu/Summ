@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     </head>
 
@@ -32,52 +32,78 @@
 
         <div class="overlay">
 
-            <div class="overlay-card demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="card1 overlay-card demo-card-wide mdl-card mdl-shadow--2dp">
                 <div class="mdl-card__title">
-                    <h5 id = "title1">Site A</h5>
+                    <h5 id = "title1">Sponsored</h5>
                 </div>
                 <div  class="mdl-card__supporting-text">
                     <p id = "sum1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Mauris sagittis pellentesque lacus eleifend lacinia...</p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Mauris sagittis pellentesque lacus eleifend lacinia...</p>
                     <div id = "Links1">
-                </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="overlay-card demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="card2 overlay-card demo-card-wide mdl-card mdl-shadow--2dp">
                 <div class="mdl-card__title">
-                    <h5>Site B</h5>
+                    <h5 id = "title2">Site B</h5>
                 </div>
                 <div class="mdl-card__supporting-text">
                     <p id = "sum2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Mauris sagittis pellentesque lacus eleifend lacinia...</p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Mauris sagittis pellentesque lacus eleifend lacinia...</p>
                     <div id = "Links1">
-                </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="overlay-card demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="card3 overlay-card demo-card-wide mdl-card mdl-shadow--2dp">
                 <div class="mdl-card__title">
-                    <h5>Mayank's browser history</h5>
+                    <h5 id = "title3">Mayank's browser history</h5>
                 </div>
                 <div class="mdl-card__supporting-text">
                     <p id = "sum3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Mauris sagittis pellentesque lacus eleifend lacinia...</p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Mauris sagittis pellentesque lacus eleifend lacinia...</p>
                     <div id = "Links1">
-                </div>
+                    </div>
                 </div>
             </div>
 
 
         </div>
 
-        <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
-        
-        
-        <script type="text/javascript" src="praiseallah.js"></script>
+        <script>
+            $( document ).ready(function() {
+                $.getJSON('var json = $.getJSON("C:\Users\Roger Wang\Desktop\Summ\Extension Frontend Roger\processJSON.json");', function(data) {
+                    console.log(data);
+                    alert(data);
+                });
+
+                var data = {"name":"A brief history of quantum alternatives","sentences":" Despite their radical break with past ideas of space and time, Einstein's theories would soon end up lumped in with Newton's as part of \"Classical physics.\" We needed to do so because there was a revolution in scientific thought so profound that it created a bright line in the history of science: the development of quantum physics.[BREAK] Once the quantum world leaves us feeling suitably uncomfortable, then we can understand why, ever since it arrived on the scene, physicists have been trying to construct alternatives to quantum mechanics-alternatives that reproduce the same fantastic agreement with experiments while retaining part of the classical core that agrees with our deepest intuitions about how nature should behave.[BREAK] First, if you slow down the rate of emission of particles so that only one can pass through the slits at a time, the result does not change.[BREAK] This must mean, somehow, that the particle splits into two, passes through both slits, and interferes with itself! Second, if you make any alteration to the apparatus to record which slit the particle passes through, the interference pattern disappears and is replaced by the pattern you would expect if the particles were simply particles, with no wavelike characteristics: two symmetrical distributions centered on each slit.[BREAK] Technology has advanced to the point where we can decide what kind of measurement to take after the particle has begun its journey.[BREAK] The particle must have \"Decided\" to act like a particle or a wave before passing through the slits and before the final configuration of the experiment.[BREAK] The results of the delayed choice experiments have led more than one physicist to speculate that the information about whether to be a particle or a wave is transmitted back in time, from the time of the choice to some time before the particle traverses the device.[BREAK]","links":[{"name":"EPR paradox - Wikipedia","url":"https://www.bing.com/cr?IG=A15F69959F42476DA89C30A34B8FCE63&CID=094118C36C046D31124F120C6D5B6CA7&rd=1&h=SPlvLHEWa8yFzVrVegPFicM9ERt4BOTXDoI68cZdQB4&v=1&r=https%3a%2f%2fen.wikipedia.org%2fwiki%2fEPR_paradox&p=DevEx,5077.1","displayUrl":"https://en.wikipedia.org/wiki/EPR_paradox","description":"... of 1935 is an influential thought experiment in quantum mechanics ... physics experiments. Quantum mechanics ... EPR paradox, which shows that a \"measurement ..."},{"name":"Quantum Suicide - Thought Experiments","url":"https://www.bing.com/cr?IG=A15F69959F42476DA89C30A34B8FCE63&CID=094118C36C046D31124F120C6D5B6CA7&rd=1&h=W82uW07IQtDbSjKlW9uoe_RID6UqU4JFoJLS6G0lqUc&v=1&r=https%3a%2f%2fthoughtexperiments.net%2fquantum-suicide%2f&p=DevEx,5093.1","displayUrl":"https://thoughtexperiments.net/quantum-suicide","description":"Quantum Suicide, Quantum ... This is where the Quantum Suicide thought experiment ... Bruno Marchal Hans Moravec Max Tegmark physics quantum mechanics quantum suicide."},{"name":"Experiment confirms quantum theory weirdness - Phys.org","url":"https://www.bing.com/cr?IG=A15F69959F42476DA89C30A34B8FCE63&CID=094118C36C046D31124F120C6D5B6CA7&rd=1&h=Mv_4BH4GxcxBnQ0tCsVDsHC2aBzCzwSya6lmbvyRSEk&v=1&r=https%3a%2f%2fphys.org%2fnews%2f2015-05-quantum-theory-weirdness.html&p=DevEx,5111.1","displayUrl":"https://phys.org/news/2015-05-quantum-theory-weirdness.html","description":"\"Quantum physics' predictions about interference seem odd enough ... so-called thought experiments do the ... Quantum mechanics is a non-intuitive science for ..."}]}
+
+                document.getElementById('title1').innerHTML = data.links[0].name;
+                document.getElementById('title2').innerHTML = data.links[1].name;
+                document.getElementById('title3').innerHTML = data.links[2].name;
+                document.getElementById('sum1').innerHTML = data.links[0].description;
+                document.getElementById('sum2').innerHTML = data.links[1].description;
+                document.getElementById('sum3').innerHTML = data.links[2].description;
+
+                $('.card1').click(function(e) {  
+                    window.location = data.links[0].displayUrl;
+                });
+                $('.card2').click(function(e) {  
+                    window.location = data.links[1].displayUrl;
+                });
+                $('.card3').click(function(e) {  
+                    window.location = data.links[2].displayUrl;
+                });
+
+                console.log(encodeURIComponent(window.location.href));
+
+            });
+        </script>
     </body>
 </html>
 
