@@ -16,6 +16,6 @@ window.onload = function() {
     );
 
     function start(){
-        alert("started");
+       
     }
 }
