@@ -74,7 +74,8 @@
 
         <script>
             $( document ).ready(function() {
-                $.getJSON("https://limitless-falls-17990.herokuapp.com/api/summary/" + encodeURIComponent(window.location.href), function(data) {
+                $.getJSON("https://damp-savannah-22073.herokuapp.com/api/summary/" + encodeURIComponent(window.location.href), function(data) {
+                    console.log("data displayed");
                     document.getElementById('title1').innerHTML = data.links[0].name;
                     document.getElementById('title2').innerHTML = data.links[1].name;
                     document.getElementById('title3').innerHTML = data.links[2].name;
@@ -91,7 +92,7 @@
                     $('.card3').click(function(e) {  
                         window.location = data.links[2].displayUrl;
                     });
-
+                    
                     console.log(encodeURIComponent(window.location.href));
                 });
 
