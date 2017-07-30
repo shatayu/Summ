@@ -30,7 +30,7 @@ router.route('/summary/:url')
             .header("Accept", "text/plain")
             .end(function (summary) {
                 // second GET request gets topics of summarized article
-                unirest.post("https://proxem-thematization.p.mashape.com/api/wikiAnnotator/GetCategories?nbtopcat=20")
+               unirest.post("https://proxem-thematization.p.mashape.com/api/wikiAnnotator/GetCategories?nbtopcat=20")
                     .header("X-Mashape-Key", "RAvJDfEXyemshsoBGgeR2hy3aNqhp1yKCg6jsn2wYQ1f6cpZQj")
                     .header("Accept", "application/json")
                     .header("Content-Type", "text/plain")
