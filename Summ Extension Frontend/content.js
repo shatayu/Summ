@@ -54,3 +54,52 @@ document.body.appendChild(card3);
 
  var html = "<table><tr><td>123</td><td>456</td></tr></table>";
     document.getElementById("table").innerHTML = html;
+
+    document.getElementById("table").innerHTML = html;
+
+
+
+
+
+
+
+
+    document.getElementById("record").click(function(){
+    	state = true;
+    	console.log("true");
+    });
+    document.getElementById("stop").click(function(){
+    	state = false;
+    	console.log("false");
+    })
+ 
+ var state = false
+ var link = window.location.href ;
+ 
+ while(state){
+ link.onchange = function(){
+ 	
+ var URL_Concept = "localhost:8080/api/summary/" + link ;
+   $.ajax({
+           type: 'GET',
+           url: URL_Concept,
+           dataType: 'json',
+           success: processJSON,
+           error: function(e)
+           {
+               console.log(e + "sdfsdf")
+           }    
+ }
+ };
+ }
+ 
+ function processJSON(Json){
+ 
+ 	var Sentences = JSON.parse(Json);
+ 	var Links = Sentences.links;
+ 	document.getElementById("table").innerHTML = Links[0].name + " " + Links[0].url + " " + Links[0].displayUrl + " " + Links[0].description;
+ 
+ 	var summary = Sentences.sentences.split("[BREAK]");
+ 	var title = Sentences.title;
+ 
+ } 
