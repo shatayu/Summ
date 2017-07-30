@@ -3,11 +3,14 @@
     "name": "Summ",
     "description": "Research Assistant",
     "version": "1.0",
+    "icons": {
+              "128": "./icons/icon128.png" 
+             },
     "permissions": [
         "http://localhost/*",
         "webNavigation", "tabs", "http://*/*", "https://*/*",
         "cookies"
-           ],
+    ],
     "browser_action": {
         "default_popup": "popup.html"
     },
@@ -17,10 +20,10 @@
             "js": ["content.js", "./js/jquery/jquery.min.js"]
         }
     ],
-
+    "options_page": "options.html",
     "web_accessible_resources": [
         "overlay.html"
     ]
 
-    
+
 }

@@ -3,8 +3,9 @@ function popup() {
         var activeTab = tabs[0];
         chrome.tabs.sendMessage(activeTab.id, {"message": "start"});
     });
+    chrome.tabs.create({ url: "options.html" });
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("record").addEventListener("click", popup);
-}
+    document.getElementById("stop").addEventListener("click", popup);
+});
