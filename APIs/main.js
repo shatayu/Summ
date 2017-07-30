@@ -38,8 +38,9 @@ router.route('/summary/:url')
                     .end(function (topics) {
                         console.log(topics);
                         // third GET request gets links
-
-                        var queries = topics.body.categories[0].name + " " + topics.body.categories[1].name + " " + topics.body.categories[2].name;
+                        console.log(topics);
+                        var queries = "memes";
+                        //var queries = topics.body.categories[0].name + " " + topics.body.categories[1].name + " " + topics.body.categories[2].name;
                         //console.log(queries);
                         unirest.get("https://api.cognitive.microsoft.com/bing/v5.0/search?q=" + queries)
                             .header("Ocp-Apim-Subscription-Key", "8f4b856c2c89483a920618c3cd92ee0d")
