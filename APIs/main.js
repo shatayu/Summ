@@ -36,6 +36,7 @@ router.route('/summary/:url')
                     .header("Content-Type", "text/plain")
                     .send(summary.body.sm_api_content)
                     .end(function (topics) {
+                        console.log(topics);
                         // third GET request gets links
 
                         var queries = topics.body.categories[0].name + " " + topics.body.categories[1].name + " " + topics.body.categories[2].name;
