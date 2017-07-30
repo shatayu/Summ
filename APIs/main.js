@@ -3,9 +3,9 @@ var express = require("express");
 var app     = express();
 var bodyParser = require("body-parser");
 
-var summarize = require("./summarize.js");
-var topic = require("./topic.js");
-var search = require("./search.js");
+//var summarize = require("./summarize.js");
+//var topic = require("./topic.js");
+//var search = require("./search.js");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -43,7 +43,7 @@ router.route('/summary/:url')
                         // third GET request gets links
 
                         var queries = topics.body.categories[0].name + " " + topics.body.categories[1].name + " " + topics.body.categories[2].name;
-                        console.log(queries);
+                        //console.log(queries);
                         unirest.get("https://api.cognitive.microsoft.com/bing/v5.0/search?q=" + queries)
                             .header("Ocp-Apim-Subscription-Key", "8f4b856c2c89483a920618c3cd92ee0d")
                             .send()
