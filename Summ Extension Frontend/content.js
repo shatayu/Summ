@@ -1,5 +1,9 @@
-$.get(chrome.extension.getURL('/overlay.html'), function(data) {
-    $(data).appendTo('body');
-    // Or if you're using jQuery 1.8+:
-    // $($.parseHTML(data)).appendTo('body');
-});
+
+window.onload = function() {
+
+    $.get(chrome.extension.getURL('./overlay.html'), function(data) {
+        $(data).appendTo('body');
+        //    $($.parseHTML(data)).appendTo('body');
+    });
+
+}
